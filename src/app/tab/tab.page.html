@@ -1,0 +1,176 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Suggested Vacation Type for you </ion-label>
+
+
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle style="text-align: left;">Types of Vacations and the Best Vacation For You</ion-card-subtitle>
+            <img src="/assets/inter.jpg" alt=" inter">
+
+            <ion-card-title>International Vacation</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content style="text-align: justify;" >
+            <ion-label >If you’re on the hunt for the unknown, new places, new food, new cultures and new experiences than an international vacation is the vacation for you.  An international vacation is perfect for someone who is open to new ideas and not afraid to try something they have never done before.</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Pros:</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content style="text-align: justify;" >
+            <p>*Nothing is better than new experiences, new cultures, and new foods (that’s our opinion of course).<br><br>
+              *Experience and see things unique to that location.<br><br>
+              *History, experience things and places you’ve only seen in books or heard about in classrooms, movies, or in documentaries.<br><br>
+              *Meet new people with different perspectives.<br><br>
+              *Learn!  Visiting a new country allows you to learn something new!<br><br></p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Cons:</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content style="text-align: justify;">
+            <p>*Traveling a further distance usually means it’s more expensive!<br><br>
+              *Usually, international travel requires a longer vacation (which could also be a good thing) and if you have limited days off than this could become a challenge.<br><br>
+              *Longer prep work, planning, and ensuring arrangements are met.<br><br>
+              *Making sure you have your passports, if any visa is required, currency exchange, etc.<br><br>
+              *Communication barriers if traveling to countries where English isn’t spoken or their primary language.<br><br></p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+
+    </ion-slides>
+
+
+
+ 
+
+    <ion-card>
+    
+      <ion-card-content style="font-size: large; text-align: center; color: black;">
+        <strong> Below are the Best 5 countries must Visit! </strong>
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+  <ion-item *ngFor='let country of country'>
+      <ion-slides pager="true">
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-img [src] ="country.countryimg" class="card-image"></ion-img>
+              <ion-card-title>{{country.country}}</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content style="text-align: justify;">
+              {{country.countrydes}}
+            </ion-card-content>
+           
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+
+            <ion-card-content style="text-align: justify;">
+             <h1> Here are the top 3 best place to visit in {{country.country}}</h1>
+            </ion-card-content>
+           
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+ 
+            <ion-card-header>
+              <ion-img [src] ="country.imga" class="card-image"></ion-img>
+                <ion-card-subtitle> {{country.country}}</ion-card-subtitle>
+              <ion-card-title>{{country.placesa}}</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content style="text-align: justify;" >
+              {{country.desa}}
+            </ion-card-content>
+
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+ 
+            <ion-card-header>
+              <ion-img [src] ="country.imgb" class="card-image"></ion-img>
+            <ion-card-title>{{country.placesb}}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content style="text-align: justify;" >
+            {{country.desb}}
+          </ion-card-content>
+
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+ 
+            <ion-card-header>
+              <ion-img [src] ="country.imgc" class="card-image"></ion-img>
+              <ion-card-subtitle> {{country.country}}</ion-card-subtitle>
+            <ion-card-title>{{country.placesc}}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            {{country.desc}}
+          </ion-card-content>
+
+          </ion-card>
+        </ion-slide>
+
+
+      </ion-slides>
+  </ion-item>
+
+
+
+ 
+
+
+  
+    
+  
+
+    
+
+  
+
+</ion-content>

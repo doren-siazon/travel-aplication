@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Suggested Vacation Type for you </ion-label>
+
+
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle style="text-align: left;">Types of Vacations and the Best Vacation For You</ion-card-subtitle>
+              <img src="/assets/inter.jpg" alt=" inter">
+
+              <ion-card-title>Camping Vacation</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <ion-label >A common vacation type combined with a road trip is a camping vacation.  Combine vacation types and commonly combine a road trip with camping at a national park (three vacations types in one).</ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Pros:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <p>*Getting away from reality into nature is one of the most soothing experiences.  There’s something meditative to slowing down and just relaxing under the stars.<br><br>
+                *Camping allows you to build relationships since you are not distracted by your phone, the media, TV, etc.<br><br>
+                *Campgrounds are inexpensive compared to hotels, especially if you find a free campground<br><br></p>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Cons:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;">
+              <p>*If sanitation is a priority, camping may not be your cup of tea.<br><br>
+                *Limited amenities, like running water, showers, clean toilets.<br><br>
+                *Most of the time you have to purchase your supplies ahead of time and if you forget something critical it could be detrimental to your camping vacation.<br><br></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+    </ion-slides>
+
+    <ion-card>
+      <ion-card-content style="font-size: large; text-align: center; color: black;">
+        <strong> Below are the Best 5 Camping must try! </strong>
+      </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-item *ngFor='let city of city'>
+      <ion-slides pager="true">
+
+            <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <ion-img [src] ="city.img" class="card-image"></ion-img>
+                  <ion-card-title>{{city.places}}</ion-card-title>
+                </ion-card-header>
+  
+                <ion-card-content style="text-align: justify;">
+                  {{city.des}}
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            
+        </ion-slides>
+    </ion-item>
+
+
+
+
+</ion-content>
+
+
+
+</ion-content>

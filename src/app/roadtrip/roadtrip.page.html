@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Suggested Vacation Type for you </ion-label>
+
+
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle style="text-align: left;">Types of Vacations and the Best Vacation For You</ion-card-subtitle>
+              <img src="/assets/inter.jpg" alt=" inter">
+
+              <ion-card-title>RoadTrip Vacation</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <ion-label >Road trips are for the more adventurous type of traveler, those who like to take control into their own hands and go wherever the road takes them.  This vacation type can be planned or spontaneous and it’s within these vacations you can find out whether or not you truly enjoy another person’s company.  If you want to test your relationship or friendship, go on a road trip together and stay in each other’s company 24/7 for a few days!.</ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Pros:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <p>*Road trips can strengthen your relationship with a partner or friend.<br><br>
+               * Road trips enable flexibility, you can choose where and how far you want to go.<br><br>
+                *Endless options, historic highways, coast to coast road trips, coastal road trips, etc.<br><br>
+                *Cheaper than flying (not always but most of the time)<br><br></p>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Cons:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;">
+              <p>*A lot of time spent with another person (this could also be a good thing).<br><br>
+                *If the road trip turns south (pun intended) a damaged relationship or friendship could result from it.<br><br>
+                *Depending on your travel, cramped cars can be a pain and make the drive a horrible experience.<br><br>
+                *Breakdowns (knock on wood), we do not wish this upon anyone and hope your adventure goes smoothly, but reality happens and breakdowns can occur.<br><br></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+    </ion-slides>
+
+
+
+    <ion-card>
+      <ion-card-content style="font-size: large; text-align: center; color: black;">
+        <strong> Below are the Best 5 Roadtrip must try! </strong>
+      </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-item *ngFor='let city of city'>
+      <ion-slides pager="true">
+
+            <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <ion-img [src] ="city.img" class="card-image"></ion-img>
+                  <ion-card-title>{{city.places}}</ion-card-title>
+                </ion-card-header>
+  
+                <ion-card-content style="text-align: justify;">
+                  {{city.des}}
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            
+        </ion-slides>
+    </ion-item>
+
+
+
+
+</ion-content>

@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Suggested Vacation Type for you </ion-label>
+
+
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle style="text-align: left;">Types of Vacations and the Best Vacation For You</ion-card-subtitle>
+              <img src="/assets/inter.jpg" alt=" inter">
+
+              <ion-card-title>Cruise Vacation</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <ion-label >Similar to a resort, a cruise is a massive floating resort that brings you to multiple locations.  Often more expensive than resorts, cruises offer the ultimate package of everything you can possibly imagine from an entertainment perspective.  Cruises have water parks, casino’s, pools, live performances, comedy acts, contests, sports activities, zip lines and more.   Cruises are great for folks who do not want to plan activities and just want to go with the flow.</ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Pros:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <p>*Cruises are preplanned trips, with different activities planned for you each day.  Simply decide what you want to participate in and off you go.<br><br>
+                *Can be all-inclusive depending on the cruise line<br><br>
+                *Short or long stay vacations, make it a week vacation or up to 245 days on an around the world cruise (super expensive!).<br><br>
+                *All the amenities necessary and they provide everything you need<br><br></p>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Cons:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;">
+              <p>*Very touristy, it can be difficult to break away and experience the true culture of the country or city that you’re stopping at.<br><br>
+                *Can be expensive compared to landlocked vacations<br><br></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+    </ion-slides>
+
+
+    <ion-card>
+      <ion-card-content style="font-size: large; text-align: center; color: black;">
+        <strong> Below are the Best 3 Cruise Ship must try! </strong>
+      </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-item *ngFor='let city of city'>
+      <ion-slides pager="true">
+
+            <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <ion-img [src] ="city.img" class="card-image"></ion-img>
+                  <ion-card-title>{{city.places}}</ion-card-title>
+                </ion-card-header>
+  
+                <ion-card-content style="text-align: justify;">
+                  {{city.des}}
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            
+        </ion-slides>
+    </ion-item>
+
+
+
+
+</ion-content>

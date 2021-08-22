@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Suggested Vacation Type for you </ion-label>
+
+
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle style="text-align: left;">Types of Vacations and the Best Vacation For You</ion-card-subtitle>
+              <img src="/assets/inter.jpg" alt=" inter">
+
+              <ion-card-title>City Vacation</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <ion-label >According to the Travel Channel, the most popular vacation locations in the world are Paris, New York, and Rome (all cities).  What’s that tell us?  City vacations are the most popular vacation type in the world and there’s a good reason behind that. <br> First, there’s so much to do in a city.  There are historical sights, amazing restaurants, and plenty of activities all within walking distances of one another.  Each city has something special and unique to it as well as plenty of tourist activities.</ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Pros:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <p>*Any season is a good season to visit cities.<br><br>
+                *Some may argue this, but we think cities offer unique experiences during each season which often gives us a reason to visit them more than once!<br><br>
+                *If you’re a foodie a city vacation is for you!<br><br>
+                *Diversity!  Major cities, like NYC, Paris, London, have so much diversity which is great to experience.<br><br>
+                *Duration flexibility.  City vacations appeal to short or long stay travelers<br><br></p>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Cons:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;">
+              <p>*City vacations are more expensive.<br><br>
+                *Majority of activities involve spending money at/on museums, restaurants, tours, shows, etc.<br><br>
+                *Hotels are generally more expensive since the costs of living is higher in a city..<br><br></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+    </ion-slides>
+
+
+  <ion-item *ngFor='let city of city'>
+    <ion-slides pager="true">
+
+
+          <ion-slide>
+            <ion-card>
+              <ion-card-header>
+                <ion-img [src] ="city.img" class="card-image"></ion-img>
+                <ion-card-title>{{city.places}}</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content style="text-align: justify;">
+                {{city.des}}
+              </ion-card-content>
+            
+            </ion-card>
+          </ion-slide>
+      </ion-slides>
+  </ion-item>
+
+</ion-content>

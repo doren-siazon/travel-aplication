@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Suggested Vacation <br> Type for you</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label>International Vacation</ion-label>
+      <ion-button (click)="myAction()" href="/tab" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>City Vacation</ion-label>
+      <ion-button (click)="myAction()" href="/city" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Cruise Vacation</ion-label>
+      <ion-button (click)="myAction()" href="/cruise" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Resort  Vacation</ion-label>
+      <ion-button (click)="myAction()" href="/resort" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Volunteering Vacation</ion-label>
+      <ion-button (click)="myAction()" href="/volunteering" fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

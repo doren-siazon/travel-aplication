@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Suggested Vacation Type for you </ion-label>
+
+
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle style="text-align: left;">Types of Vacations and the Best Vacation For You</ion-card-subtitle>
+              <img src="/assets/inter.jpg" alt=" inter">
+              <ion-card-title>Resort Vacation</ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="text-align: justify;" >
+              <ion-label >Similar to a beach vacation, travelers often picture themselves at a resort with a beautiful pool, water park, and more.  A resort vacation is the ultimate getaway where you just want to lose track of reality, relax by the pool, get a massage, and simply pamper down.  Resorts range in all shapes and sizes but generally have a similar purpose in mind, “How can we keep our guests here for as long as possible giving them a solution to any desire or need they have while they’re here”.</ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Pros:</ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="text-align: justify;" >
+              <p>*Majority of resorts are in warm locations unless you’re looking at ski resorts.<br><br>
+                *Plenty of activities appealing to every age.<br><br>
+                *Can be all inclusive depending on location.<br><br>
+                *Short or long stay vacations, make it a week vacation or a weekend getaway.<br><br>
+                *All the amenities necessary and they provide everything you need.<br><br></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Cons:</ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="text-align: justify;">
+              <p>*Very touristy, it can be difficult to break away and experience the true culture of the location.<br><br>
+                *Can be expensive (unless you travel hack).<br><br>
+                *Hefty resort fees for all-inclusive packages<br><br>
+                *Sales presentations are often required at some resorts depending on whether or not you booked a vacation package.   If you got a deal through a telephone promotion or won a free trip, resorts often require you to attend a presentation.<br><br></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+    </ion-slides>
+
+      <ion-card>
+        <ion-card-content style="font-size: large; text-align: center; color: black;">
+          <strong> Below are the Best 5 Resort must Visit! </strong>
+        </ion-card-content>
+      </ion-card>
+
+
+    <ion-item *ngFor='let city of city'>
+      <ion-slides pager="true">
+
+            <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <ion-img [src] ="city.img" class="card-image"></ion-img>
+                  <ion-card-title>{{city.places}}</ion-card-title>
+                </ion-card-header>
+  
+                <ion-card-content style="text-align: justify;">
+                  {{city.des}}
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            
+        </ion-slides>
+    </ion-item>
+
+
+
+
+
+
+
+
+
+
+</ion-content>

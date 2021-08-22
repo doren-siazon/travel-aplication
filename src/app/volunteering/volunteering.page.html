@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Suggested Vacation Type for you </ion-label>
+
+
+  <ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle style="text-align: left;">Types of Vacations and the Best Vacation For You</ion-card-subtitle>
+              <img src="/assets/inter.jpg" alt=" inter">
+
+              <ion-card-title>Volunteering Vacation</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <ion-label >Volunteering vacations offer the opportunity to experience a new location without trading money but rather trading your time.  Many missionary retreats allow volunteers to help developing countries build schools bringing value to local communities while funding your hospitality while you’re away.  This type of vacation can be very fulfilling and rewarding.</ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Pros:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;" >
+              <p>*Travel for free or at a steep discount and get free hospitality while you’re away.<br><br>
+                *Participate in rewarding activities that benefit others.<br><br>
+                *Meet new people and memories that can last a lifetime<br><br></p>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Cons:</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: justify;">
+              <p>*Living and travel arrangements may not be the most convenient/luxurious, usually economy seats and lower end hotels.<br><br>
+               *Not necessarily a relaxing vacation (more focused on giving time/energy for the greater good).<br><br>
+                *Volunteer vacations may not be in the world’s most desired locations.<br><br></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+    </ion-slides>
+
+
+    <ion-card>
+      <ion-card-content style="font-size: large; text-align: center; color: black;">
+        <strong> Below are the Best 5 Volunteering must try! </strong>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-item *ngFor='let city of city'>
+      <ion-slides pager="true">
+
+            <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <ion-img [src] ="city.img" class="card-image"></ion-img>
+                  <ion-card-title>{{city.places}}</ion-card-title>
+                </ion-card-header>
+  
+                <ion-card-content style="text-align: justify;">
+                  {{city.des}}
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            
+        </ion-slides>
+    </ion-item>
+
+
+
+</ion-content>
